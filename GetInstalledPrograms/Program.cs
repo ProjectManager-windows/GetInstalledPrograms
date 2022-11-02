@@ -26,6 +26,7 @@ namespace GetInstalledPrograms
         public static void Main(string[] args)
         {
             var items = GetInstalledSoftwareList();
+
             var options = new JsonSerializerOptions
             {
                 Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic),
@@ -56,7 +57,6 @@ namespace GetInstalledPrograms
                     }
                 }
             }
-
             //using (RegistryKey key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall", false))
             using (var localMachine = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, RegistryView.Registry64))
             {

@@ -35,7 +35,7 @@ namespace GetInstalledPrograms
                     using (RegistryKey subKey = key.OpenSubKey(subKeyName))
                     {
                         if (subKey == null) continue;
-                        if (subKey.GetValueNames().Length < 3) continue;
+                        if (subKey.GetValueNames().Length == 0) continue;
                         if (subKey.GetValue("SystemComponent") != null && subKey.GetValue("SystemComponent").ToString() == "1") continue;
                         if (subKey.GetValue("InstallLocation") == null || subKey.GetValue("InstallLocation").ToString() == "") continue;
                         items.Add(new Item(

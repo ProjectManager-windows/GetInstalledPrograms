@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text.Encodings.Web;
+using System.Xml.Serialization;
 using Microsoft.Win32;
-using System.Text.Json;
-using System.Text.Unicode;
-
 namespace GetInstalledPrograms
 {
-    class Item
+    [Serializable]
+	class Item
     {
         public string DisplayName { get; }
         public string Publisher { get; }
@@ -26,13 +24,11 @@ namespace GetInstalledPrograms
         public static void Main(string[] args)
         {
             var items = GetInstalledSoftwareList();
+			var serializer = new XmlSerializer(this.GetType());
+			serializer.Serialize(stringwriter, this);
+			return stringwriter.ToString();
 
-            var options = new JsonSerializerOptions
-            {
-                Encoder = JavaScriptEncoder.Create(UnicodeRanges.BasicLatin, UnicodeRanges.Cyrillic),
-                WriteIndented = true
-            };
-            Console.WriteLine(JsonSerializer.Serialize(items, options));
+			Console.WriteLine();
         }
 
         public static List<Item> GetInstalledSoftwareList()

@@ -37,7 +37,6 @@ namespace GetInstalledPrograms
 
         public static List<Item> GetInstalledSoftwareList()
         {
-            string displayName;
             var items = new List<Item>();
 
             using (RegistryKey key = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall", false))

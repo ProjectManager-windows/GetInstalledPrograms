@@ -4,7 +4,6 @@ using System.Xml.Serialization;
 using Microsoft.Win32;
 namespace GetInstalledPrograms
 {
-    [Serializable]
 	class Item
     {
         public string DisplayName { get; }
@@ -23,12 +22,15 @@ namespace GetInstalledPrograms
     {
         public static void Main(string[] args)
         {
-            var items = GetInstalledSoftwareList();
-			var serializer = new XmlSerializer(this.GetType());
-			serializer.Serialize(stringwriter, this);
-			return stringwriter.ToString();
-
-			Console.WriteLine();
+            using (var stringwriter = new System.IO.StringWriter())
+            {
+                var items = GetInstalledSoftwareList();
+                var serializer = new XmlSerializer(items.GetType());
+                serializer.Serialize(stringwriter, items);
+                Console.WriteLine(stringwriter.ToString());
+                Environment.Exit(0);
+            }
+            Environment.Exit(1);
         }
 
         public static List<Item> GetInstalledSoftwareList()

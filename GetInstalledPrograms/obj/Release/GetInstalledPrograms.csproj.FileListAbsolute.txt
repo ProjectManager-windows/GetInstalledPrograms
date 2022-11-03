@@ -6,3 +6,11 @@ C:\Users\nefediev\RiderProjects\GetInstalledPrograms\GetInstalledPrograms\obj\Re
 C:\Users\nefediev\RiderProjects\GetInstalledPrograms\GetInstalledPrograms\obj\Release\GetInstalledPrograms.csproj.CoreCompileInputs.cache
 C:\Users\nefediev\RiderProjects\GetInstalledPrograms\GetInstalledPrograms\obj\Release\GetInstalledPrograms.exe
 C:\Users\nefediev\RiderProjects\GetInstalledPrograms\GetInstalledPrograms\obj\Release\GetInstalledPrograms.pdb
+C:\Projects\GetInstalledPrograms\GetInstalledPrograms\bin\Release\GetInstalledPrograms.exe.config
+C:\Projects\GetInstalledPrograms\GetInstalledPrograms\bin\Release\GetInstalledPrograms.exe
+C:\Projects\GetInstalledPrograms\GetInstalledPrograms\bin\Release\GetInstalledPrograms.pdb
+C:\Projects\GetInstalledPrograms\GetInstalledPrograms\obj\Release\GetInstalledPrograms.csproj.AssemblyReference.cache
+C:\Projects\GetInstalledPrograms\GetInstalledPrograms\obj\Release\GetInstalledPrograms.csproj.SuggestedBindingRedirects.cache
+C:\Projects\GetInstalledPrograms\GetInstalledPrograms\obj\Release\GetInstalledPrograms.csproj.CoreCompileInputs.cache
+C:\Projects\GetInstalledPrograms\GetInstalledPrograms\obj\Release\GetInstalledPrograms.exe
+C:\Projects\GetInstalledPrograms\GetInstalledPrograms\obj\Release\GetInstalledPrograms.pdb
